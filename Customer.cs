@@ -27,5 +27,10 @@ namespace PizzaStore
 
         public string PhoneNr
         { get { return _phoneNr; } }
+
+        public override string ToString()
+        {
+            return $"Customer info: \n Name: {Name} -- Email: {Email} -- Phone: {PhoneNr}";
+        }
     }
 }

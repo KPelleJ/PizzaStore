@@ -11,12 +11,20 @@ namespace PizzaStore
         private string _name;
         private string _address;
         private string _phoneNr;
+        private Menu menu1;
+        private Customer customer1;
+        private Customer customer2;
+        private Customer customer3;
+        private Order order1;
+        private Order order2;
+        private Order order3;
 
-        public Store(string name, string address, string phoneNr) 
-        { 
+        public Store(string name, string address, string phoneNr)
+        {
             _name = name;
             _address = address;
             _phoneNr = phoneNr;
+            menu1 = new Menu("Big Mammas Pizza");
         }
 
         public string Name
@@ -25,7 +33,40 @@ namespace PizzaStore
         public string Address
         { get { return _address; } }
 
-        public string PhoneNr 
-        { get { return _phoneNr;} }
+        public string PhoneNr
+        { get { return _phoneNr; } }
+
+        public void start()
+        {
+            customer1 = new Customer("Benny", "Benny@mail.com", "72939281");
+            customer2 = new Customer("Yvonne", "Egon.er.dum@mail.com", "78972733");
+            customer3 = new Customer("Bøffen", "Hard_Knock_life@mail.com", "87293388");
+            order1 = new Order(customer1.Name, customer1.Email, customer1.PhoneNr);
+            order2 = new Order(customer2.Name, customer2.Email, customer2.PhoneNr);
+            order3 = new Order(customer3.Name, customer3.Email, customer3.PhoneNr);
+        }
+
+        public override string ToString()
+        {
+            return $"{menu1}";
+        }
+
+        public string CustomerInfo(int id)
+        {
+            if (id == 1)
+            { return $"{customer1}"; }
+            else if (id == 2)
+            { return $"{customer2}"; }
+            else if (id == 3)
+            { return $"{customer3}"; }
+            else
+            { return "There is no customer with that ID"; }
+        }
+
+        public string OrderInfo()
+        {
+            return $"{order1}";
+        }
     }
+
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaStore
 {
-    public class OrderConfirmation:Order
+    public class OrderConfirmation
     {
     }
 }
