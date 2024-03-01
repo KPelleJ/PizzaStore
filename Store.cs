@@ -43,7 +43,7 @@ namespace PizzaStore
             customer3 = new Customer("Bøffen", "Hard_Knock_life@mail.com", "87293388");
             order1 = new Order(customer1,menu1.Pizza1);
             order2 = new Order(customer2,menu1.Pizza3);
-            order3 = new Order(customer3, menu1.Pizza4);
+            order3 = new Order(customer3,menu1.Pizza4);
         }
 
         public override string ToString()
