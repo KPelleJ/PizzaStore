@@ -41,9 +41,9 @@ namespace PizzaStore
             customer1 = new Customer("Benny", "Benny@mail.com", "72939281");
             customer2 = new Customer("Yvonne", "Egon.er.dum@mail.com", "78972733");
             customer3 = new Customer("Bøffen", "Hard_Knock_life@mail.com", "87293388");
-            order1 = new Order(customer1.Name, customer1.Email, customer1.PhoneNr);
-            order2 = new Order(customer2.Name, customer2.Email, customer2.PhoneNr);
-            order3 = new Order(customer3.Name, customer3.Email, customer3.PhoneNr);
+            order1 = new Order(customer1,menu1.Pizza1);
+            order2 = new Order(customer2,menu1.Pizza3);
+            order3 = new Order(customer3, menu1.Pizza4);
         }
 
         public override string ToString()
@@ -65,7 +65,7 @@ namespace PizzaStore
 
         public string OrderInfo()
         {
-            return $"{order1}";
+            return $"{order1} \n \n {order2} \n \n {order3}";
         }
     }
 
