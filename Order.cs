@@ -37,7 +37,8 @@ namespace PizzaStore
 
         public override string ToString()
         {
-            return $"Order number {_id} \n {_pizza.Name} \n Price: {_totalPrice}kr";
+            return $"Order number {_id} - Date {DateTime.Now} \n Customer name '{_customer.Name}' and phone '{_customer.PhoneNr}' " +
+                   $" \n Nr {_pizza.Number} {_pizza.Name} \n Price: {_totalPrice}kr";
         }
     }
 

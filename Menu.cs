@@ -42,7 +42,7 @@ namespace PizzaStore
 
         public override string ToString()
         {
-            return $"Welcome to Big mammas pizza \n THE MENU \n \n {_pizza1} \n {_pizza2} \n {_pizza3} \n {_pizza4}  ";
+            return $"Welcome to Big mammas pizza \n THE MENU \n \n {_pizza1} \n {_pizza2} \n {_pizza3} \n {_pizza4} \n Sales tax 5% \n Delivery 20kr \n ";
         }
     }
 }
